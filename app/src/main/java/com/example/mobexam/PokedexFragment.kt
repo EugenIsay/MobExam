@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.core.text.set
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mobexam.data.FullPokemon
 import com.example.mobexam.data.NetWork.PokemonApi
 import com.example.mobexam.data.NetWork.PokemonApiService
 import com.example.mobexam.data.NetWork.PokemonApiServiceImp
@@ -17,6 +18,7 @@ import com.example.mobexam.data.Pokemon
 import com.example.mobexam.data.PokemonsAdapter
 import com.example.mobexam.databinding.FragmentPokedexBinding
 import kotlinx.coroutines.launch
+import java.net.URL
 
 
 class PokedexFragment : Fragment(R.layout.fragment_pokedex) {
@@ -27,6 +29,7 @@ class PokedexFragment : Fragment(R.layout.fragment_pokedex) {
         val service = PokemonApi.retrofitService
         val serviceImpl = PokemonApiServiceImp(service)
         val RecView = view.findViewById<RecyclerView>(R.id.MainRec)
+
         lifecycleScope.launch {
             RecView.adapter = PokemonsAdapter(serviceImpl.getPokemons().results)
         }
