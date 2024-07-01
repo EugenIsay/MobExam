@@ -29,6 +29,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/search_bar"
                 android:layout_margin="10dp"
                 android:layout_width="0dp"
                 android:layout_weight="100"
@@ -44,6 +45,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MainRec"
         android:elevation="-110dp"
         android:background="@drawable/rectangle_rounded"
 

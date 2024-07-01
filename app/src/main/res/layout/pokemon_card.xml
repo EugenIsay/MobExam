@@ -10,6 +10,7 @@
     android:id="@+id/profile_item_back"
     app:roundPercent="1">
     <TextView
+        android:id="@+id/CardId"
         android:textSize="10dp"
         android:layout_margin="2dp"
         android:layout_gravity="end"
@@ -27,6 +28,7 @@
             android:background="@drawable/rect_gray"
             android:textColor="@color/black">
             <TextView
+                android:id="@+id/CardName"
                 android:textSize="10dp"
                 android:layout_margin="2dp"
                 android:layout_gravity="bottom"
@@ -35,6 +37,7 @@
                 android:text="Pokémon Name"/>
         </com.google.android.material.card.MaterialCardView>
     <ImageView
+        android:id="@+id/CardImage"
         android:layout_gravity="center"
         android:layout_width="72dp"
         android:layout_height="72dp"
