@@ -28,9 +28,7 @@ class PokedexFragment : Fragment(R.layout.fragment_pokedex) {
         val serviceImpl = PokemonApiServiceImp(service)
         val RecView = view.findViewById<RecyclerView>(R.id.MainRec)
         lifecycleScope.launch {
-
-            val a: List<Pokemon> = (serviceImpl.getPokemons().Pokemons.toList())
-            RecView.adapter = PokemonsAdapter(serviceImpl.getPokemons().Pokemons.toList())
+            RecView.adapter = PokemonsAdapter(serviceImpl.getPokemons().results)
         }
     }
 }
